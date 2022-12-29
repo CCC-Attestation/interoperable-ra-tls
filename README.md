@@ -1,2 +1,5 @@
-# interoperable-ra-tls
-Design documents and interoperability tests for Interoperable RA-TLS projects
+Based on the recent CCC Attestation SIG presentation on [Interoperable RA-TLS](https://github.com/CCC-Attestation/meetings/blob/main/materials/ShanweiCen_Interoperable_ATLS.pdf) and recommendations, design documents with detailed X.509 cert extension and evidence formats definition are being created. Efforts are in progress in the multiple RA-TLS projects ([Gramine RA-TLS](https://github.com/gramineproject/gramine/tree/master/tools/sgx/ra-tls), [RATS-TLS](https://github.com/inclavare-containers/rats-tls), [Open Enclave Attested TLS](https://github.com/openenclave/openenclave/tree/master/samples/attested_tls), [SGX SDK Attested TLS](https://github.com/intel/linux-sgx/tree/master/SampleCode/SampleAttestedTLS)) to add support of the proposed scheme.
+
+This project (interoperable-ra-tls) under the CCC Attestation SIG will host the design documents and interoperability tests.
+
+The [Interoperable RA-TLS](https://github.com/CCC-Attestation/meetings/blob/main/materials/ShanweiCen_Interoperable_ATLS.pdf) presentation forms initial version of the proposed scheme, which will be further clarified and refined in the upcoming design documents. Though this presentation mentioned about IANA registration, the proposed scheme does not have restrictions on which registry must be used. Different registries could be suitable for evidence formats.
