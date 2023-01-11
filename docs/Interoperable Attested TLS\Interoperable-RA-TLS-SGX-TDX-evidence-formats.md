@@ -6,7 +6,7 @@ Interoperable RA-TLS SGX / TDX Evidence Tags and Formats
 This document defines the evidence and endorsement formats for SGX and TDX within the framework defined in the "Interoperable RA-TLS X.509 Cert and Evidence Formats" document.
 
 # SGX / TDX Evidence CBOR Tags Registration
-Vendor-specific [CBOR tags](https://www.iana.org/assignments/cbor-tags/cbor-tags.xhtml#tags), in the range of 4294967297 and above, will be registered.
+Three [CBOR tags](https://www.iana.org/assignments/cbor-tags/cbor-tags.xhtml#tags) will be registered.
 
 - CBOR `<tag1>`: Intel TEE quote, including all SGX and TDX ECDSA quote types
     - The quote header has fields to identify TEE type and quote format.
