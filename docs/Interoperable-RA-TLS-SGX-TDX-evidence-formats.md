@@ -40,6 +40,6 @@ SGX / TDX quote and report definitions:
 
 # SGX / TDX Endorsement Data Format
 
-The optional endorsements extension for SGX / TDX is a byte string of definite-length encoded tagged CBOR array with 8 or 9 entries: `60000([<VERSION-as-integer>, h'<TCB_INFO>', h'<TCB_ISSUER_CHAIN>', h'<CRL_PCK_CERT>', h'<CRL_PCK_PROC_CA>', h'<CRL_ISSUER_CHAIN_PCK_CERT>', h'<QE_ID_INFO>', h'<QE_ID_ISSUER_CHAIN>', h'<CREATION_DATETIME>'])`
+The optional endorsements extension for SGX / TDX is a byte string of definite-length encoded tagged CBOR array with 8 or 9 entries: `60000([<VERSION-as-unsigned-integer>, h'<TCB_INFO>', h'<TCB_ISSUER_CHAIN>', h'<CRL_PCK_CERT>', h'<CRL_PCK_PROC_CA>', h'<CRL_ISSUER_CHAIN_PCK_CERT>', h'<QE_ID_INFO>', h'<QE_ID_ISSUER_CHAIN>', h'<CREATION_DATETIME>'])`
 - Index of each entry is defined in OE SDK `oe_sgx_endorsements_fields_t`, in [bits/attestation.h](https://github.com/openenclave/openenclave/blob/master/include/openenclave/bits/attestation.h).
 - The last entry, `<CREATION_DATETIME>`, is optional.
