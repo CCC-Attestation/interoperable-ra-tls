@@ -22,5 +22,5 @@ The evidence extension must include a `pubkey-hash` claim, and can optionally in
             -  For interoperable RA-TLS, the verifier of `hash-entry' must support hash algorithms sha-256 (ID 1), sha-384 (ID 7) and sha-512 (ID 8).
         - `hash-value` is a byte string holding the hash value of the X.509 cert `SubjectPublicKeyInfo` object value in DER encoding.
             - Note: the `SubjectPublicKeyInfo` object includes both the `algorithm` and `subjectPublicKey` fields.
-- `nonce` (optional): holds a nonce as a byte string. There is no restriction as to how many bytes the nonce value should be.
+- `nonce` (optional): holds `nonce-value`, a nonce as a byte string. There is no restriction as to how many bytes the nonce value should be.
     - This claim is not present if the X.509 cert does not support pre-session freshness.
