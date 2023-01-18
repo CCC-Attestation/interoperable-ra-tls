@@ -16,9 +16,11 @@ A X.509 cert for RA-TLS can either be self-signed or CA-signed. It must contain 
 # Evidence Custom Claims
 The evidence extension must include a `pubkey-hash` claim, and can optionally include a `nonce` claim:
 
-- `pubkey-hash` (required): a byte string holding a hash of the of the X.509 cert `SubjectPublicKeyInfo` object value in DER encoding (which is a byte string).
-    - The `SubjectPublicKeyInfo` object includes both the `algorithm` and `subjectPublicKey` fields.
-    - The `pubkey-hash` value is a byte string of the definite-length encoded CBOR array `hash-entry` defined in [CoSWID](https://github.com/sacmwg/draft-ietf-sacm-coswid/blob/master/draft-ietf-sacm-coswid.md) and used by [CoRIM](https://github.com/ietf-rats/ietf-corim-cddl/blob/main/concise-mid-tag.cddl).
-        - `hash-entry` is a CBOR array with two entries: `[ hash-alg-id, hash-value]`, where `hash-alg-id` is an unsigned integer identifying the hash algorithm, and `hash-value` is a byte string holding the hash value.
-- `nonce` (optional): holds a nonce as a byte string. There is no restriction as to how many bytes the nonce value should be.
+- `pubkey-hash` (required): holds `pubkey-hash-value`, a byte string of the definite-length encoded CBOR array `hash-entry` defined in [CoSWID](https://github.com/sacmwg/draft-ietf-sacm-coswid/blob/master/draft-ietf-sacm-coswid.md) and used by [CoRIM](https://github.com/ietf-rats/ietf-corim-cddl/blob/main/concise-mid-tag.cddl).
+    - `hash-entry` is a CBOR array with two entries: `[ hash-alg-id, hash-value]`, where:
+        - `hash-alg-id` is an unsigned integer identifying the hash algorithm, as registered with [IANA](https://www.iana.org/assignments/named-information/named-information.xhtml).
+            -  For interoperable RA-TLS, the verifier of `hash-entry' must support hash algorithms sha-256 (ID 1), sha-384 (ID 7) and sha-512 (ID 8).
+        - `hash-value` is a byte string holding the hash value of the X.509 cert `SubjectPublicKeyInfo` object value in DER encoding.
+            - Note: the `SubjectPublicKeyInfo` object includes both the `algorithm` and `subjectPublicKey` fields.
+- `nonce` (optional): holds `nonce-value`, a nonce as a byte string. There is no restriction as to how many bytes the nonce value should be.
     - This claim is not present if the X.509 cert does not support pre-session freshness.
