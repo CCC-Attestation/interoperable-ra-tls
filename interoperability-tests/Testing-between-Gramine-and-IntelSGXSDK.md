@@ -134,12 +134,12 @@ make
 
 3. Start client
     
-    3.1  Client inside enclave
+    - Client inside enclave
     ```sh
     ./client/host/tls_client_host ./client/enc/tls_client_enclave.signed.so -server:localhost -port:4433
     ```
 
-    3.2  Non-enclave client
+    - Non-enclave client
     ```sh
     ./non_enc_client/tls_non_enc_client -server:localhost -port:4433
     ```
