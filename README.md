@@ -1,3 +1,6 @@
+# Note: As demonstrated by the [formal analysis](https://github.com/CCC-Attestation/formal-spec-id-crisis), Interoperable RA-TLS proposed in this repo is vulnerable to [replay](https://ieeexplore.ieee.org/document/10752524/) and [diversion](https://dl.acm.org/doi/10.1145/3779208.3785387) attacks.
+
+
 Based on the recent CCC Attestation SIG presentation on [Interoperable RA-TLS](https://github.com/CCC-Attestation/meetings/blob/main/materials/ShanweiCen_Interoperable_ATLS.pdf) and recommendations, design documents with detailed X.509 cert extension and evidence formats definition are being created. Efforts are in progress in the multiple RA-TLS projects ([Gramine RA-TLS](https://github.com/gramineproject/gramine/tree/master/tools/sgx/ra-tls), [RATS-TLS](https://github.com/inclavare-containers/rats-tls), [Open Enclave Attested TLS](https://github.com/openenclave/openenclave/tree/master/samples/attested_tls), [SGX SDK Attested TLS](https://github.com/intel/linux-sgx/tree/master/SampleCode/SampleAttestedTLS)) to add support of the proposed scheme.
 
 This project (interoperable-ra-tls) under the CCC Attestation SIG will host the design documents and interoperability tests.
